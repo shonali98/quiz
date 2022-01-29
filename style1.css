@@ -20,6 +20,7 @@ body{
     background-color: #189AB4;
     padding: 0.5rem;
     color: white;
+    box-shadow: 10px 10px 10px #05445E;
 }
 
 .subjects{
@@ -70,7 +71,7 @@ body{
     padding: 10px;
 }
 /* home */
-.start_btn,.info_box{
+.start_btn,.info_box,.quiz_box{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -93,10 +94,12 @@ body{
     width: 540px;
     background-color: white;
     border: 2px #05445E;
-    border-radius: 5px ;
+    border-radius: 25px ;
+    
 }
 
 .info_box .info_title{
+    color: white;
     height: 60px;
     width: 100%;
     border-bottom: 1px solid wheat;
@@ -133,5 +136,99 @@ body{
     margin: 10px;
     height: 40px;
     width: 80px;
+    border-radius:10px;
+    transition: all 0.3s ease;
+
+}
+.info_box .buttons button:hover{
+    background-color: #05445E;
+    color: white;
     cursor: pointer;
+}
+
+.info_box .buttons .exit{
+    background-color:#E7F2F8 ;
+}
+
+.info_box .buttons .continue{
+    background-color:#74BDCB ;
+}
+
+.quiz_box{
+    width: 550px;
+    background-color: white;
+    border-radius: 5px;
+}
+.quiz_box header{
+    height: 70px;
+    z-index: 99;
+    padding: 0 30px;
+    background-color: #05445E;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px 5px 0 0;
+    box-shadow: 0px 3px 5px 1px black;
+    border-bottom: 1px black solid;
+    color: white;
+}
+
+.quiz_box header .title{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.quiz_box header .timer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 145px;
+    height: 45px;
+    background-color: white;
+    border: 1px white solid;
+    border-radius: 5px;
+    padding: 0 8px;
+}
+
+.quiz_box header .timer .time_text{
+    font-weight: 400;
+    font-size: 17px;
+    user-select: none;
+    color: black;
+}
+
+.quiz_box header .timer .timer_sec{
+    font-size: 18px;
+    font-weight: 500;
+    background-color: #189AB4;
+    height: 30px;
+    width: 45px;
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 10px;
+    border: 1px black solid;
+    user-select: none;
+    box-shadow: 1px 1px 10px #05445E;
+}
+
+.quiz_box section{
+    padding: 25px 30px 20px 30px;
+    background-color: white;
+    line-height: 2rem;
+    box-shadow: 1px 1px 10px #05445E;
+}
+
+.quiz_box section .que_text{
+    font-size: 20px;
+    font-weight: 200;
+}
+
+.quiz_box section .que_text .option_list{
+    background-color: #76d4e7;
+    border: 1px #05445E solid;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    
 }
