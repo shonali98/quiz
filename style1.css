@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body{
+    background-color: #D4F1F4;
+
+}
+/* subjects */
+.main_header{
+    margin-top: 30px;
+    display: inline-block;
+    margin-left: 45%;
+    border: 2px #05445E solid;
+    background-color: #189AB4;
+    padding: 0.5rem;
+    color: white;
+}
+
+.subjects{
+    margin-top: 30px;
+    display: flex;
+    justify-content:center;
+    flex-wrap: wrap;
+    gap: 30px;
+    
+}
+.subjects >div{
+    
+    background-color: #05445E;
+    border: 0.2em white solid;
+    height: 300px;
+    width: 300px;
+    color: white;
+    
+}
+
+.subjects >div h2{
+    text-align: center;
+    border-bottom: 1px black solid;
+    padding: 2px;
+    margin: 20px;
+
+}
+
+.subjects >div:hover{
+    cursor: pointer;
+    background-color: #05445E;
+    color: white;
+    box-shadow: 4px 4px 50px ;
+    transform: scale(1.05);
+}
+
+.subjects >div img{
+    margin-top: 5px;
+    margin-left: 30%;
+}
+
+.subjects >div a{
+    margin-bottom: 40px;
+    margin-left: 30%;
+    text-decoration: none;
+    color: aliceblue;
+    border: 0.1em white solid;
+    padding: 10px;
+}
+/* home */
+.start_btn,.info_box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.start_btn button{
+    font-size: 25px;
+    font-weight: 500;
+    color: black;
+    padding:15px 30px ;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background-color:#D4F1F4 ;
+    cursor: pointer;
+}
+
+.info_box{
+    width: 540px;
+    background-color: white;
+    border: 2px #05445E;
+    border-radius: 5px ;
+}
+
+.info_box .info_title{
+    height: 60px;
+    width: 100%;
+    border-bottom: 1px solid wheat;
+    display: flex;
+    align-items: center;
+    padding: 0 35px;
+    font-size: 20px;
+    font-weight:600 ;
+    background-color:#05445E;
+}
+
+.info_box .info_list{
+    padding: 15px 35px ;
+
+}
+
+.info_box .info_list .info{
+    margin: 5px 0;
+    font-size: 17px;
+    
+}
+
+.info_box  .buttons{
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 35px;
+    border-top: 1px wheat solid;
+
+}
+
+.info_box .buttons button{
+    margin: 10px;
+    height: 40px;
+    width: 80px;
+    cursor: pointer;
+}
