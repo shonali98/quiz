@@ -1,0 +1,174 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* body  */
+body{
+    background-color: rgb(6, 40, 51);
+    line-height: 1.7em;
+    text-align: center;
+    color: #20c4cb;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+/* --------------------------------------------- */
+/* index */
+/* logo */
+.logo{
+    
+    margin-top: 40px;
+    display: inline-block;
+    border: 1px rgb(233, 231, 225) solid;
+    border-radius: 70%;
+    padding: 20px;
+    background-color: #20c4cb ;
+    opacity: 0; 
+    /* animation */
+    animation-name: logo;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    
+    /* transmision */
+    transition-property: all;
+    transition-duration:4s ;
+
+}
+
+@keyframes logo{
+    0%{
+        transform: scaleX(0) scaleY(0);
+        opacity: 0;
+        border-radius: 10%;
+    }
+    25%{
+        transform: scaleX(0.25) scaleY(0.25);
+        opacity: 0.25;
+        border-radius: 20%;
+    }
+    50%{
+        transform: scaleX(0.50) scaleY(0.50);
+        opacity: 0.5;
+        border-radius: 30%;
+    }
+    75%{
+        transform: scaleX(0.75) scaleY(0.75);
+        opacity: 0.75;
+        border-radius: 40%;
+    }
+
+    100%{
+        transform: scaleX(1) scaleY(1);
+        opacity: 1;
+        border-radius: 0;
+    }
+}
+
+.logo:hover{
+    background-color: white;
+    
+}
+/* header */
+.header{
+    
+    height: 250px;
+}
+.header h1{
+    font-size: 50px;
+    line-height: 1.3em;
+    position: relative;
+    /* animation */
+    animation-name: header;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+
+}
+
+.header h1 span{
+    background-color: white;
+    color: rgb(6, 40, 51);
+}
+
+@keyframes header{
+    0%{
+        top: -200px;
+
+    }
+    100%{
+        top: 60px;
+    }
+}
+
+.content{
+    position: relative;
+
+    /* animation */
+    animation-name: content;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes content{
+    0%{
+        bottom: -500px;
+
+    }
+    100%{
+        bottom: 50px;
+    }
+}
+
+.button{
+    display: inline-block;
+    position: relative;
+    top: -20px;
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem ;
+    border: 1px white solid;
+    opacity: 0;
+    /* animation */
+    animation-name: button;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+
+    /* transition */
+    transition-property: all;
+    transition-duration: 2s;
+
+}
+
+@keyframes button{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.button:hover{
+    transform: scaleX(1.05) scaleY(1.05);
+    color: wheat;
+    background-color: rgb(6, 40, 51);
+    cursor: pointer;
+}
+
+/* media querry */
+@media(max-width:677px){
+    @keyframes content{
+        0%{
+            bottom: -500px;
+        }
+        100%{
+            bottom: 80px;
+        }
+    } 
+    
+    .btn:hover{
+        top: 50px;
+        
+    }
+}
