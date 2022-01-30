@@ -71,7 +71,10 @@ body{
     padding: 10px;
 }
 /* home */
-.start_btn,.info_box,.quiz_box{
+.start_btn,
+.info_box,
+.quiz_box,
+.result_box{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -81,13 +84,14 @@ body{
 .start_btn button{
     font-size: 25px;
     font-weight: 500;
-    color: black;
+    color: white;
     padding:15px 30px ;
     outline: none;
-    border: none;
-    border-radius: 5px;
-    background-color:#D4F1F4 ;
+    border: 2px white solid;
+    border-radius: 5px ;
+    background-color:#05445E ;
     cursor: pointer;
+    box-shadow: 1px 2px 2px #05445E;
 }
 
 .info_box{
@@ -95,6 +99,9 @@ body{
     background-color: white;
     border: 2px #05445E;
     border-radius: 25px ;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50% , -50%) scale (0.9);
     
 }
 
@@ -158,6 +165,9 @@ body{
     width: 550px;
     background-color: white;
     border-radius: 5px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50% , -50%) scale (0.9);
 }
 .quiz_box header{
     height: 70px;
@@ -220,9 +230,11 @@ body{
 }
 
 .quiz_box section .que_text{
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 200;
+    
 }
+
 
 .quiz_box section .que_text .option_list{
     background-color: #76d4e7;
@@ -231,4 +243,78 @@ body{
     padding: 10px 15px;
     margin-bottom: 15px;
     
+    
+}
+
+.quiz_box  .buttons {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 20px 35px;
+    border-top: 2px wheat solid;
+    gap: 20px;
+}
+
+.quiz_box .buttons button{
+    padding: 5px;
+}
+
+.quiz_box .buttons button:hover{
+    color: white;
+    background-color: #05445E;
+    cursor: pointer;
+    box-shadow:1px 1px 20px #05445E;
+}
+
+.result_box{
+    background-color: white;
+    width: 450px;
+    padding: 25px 30px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    line-height: 25px;
+    border: 2px  #05445E solid;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50% , -50%) scale (0.9);
+}
+
+.result_box .buttons {
+    display: flex;
+    justify-content: first baseline;
+    gap: 20px;
+    margin-top: 30px;
+    
+
+}
+
+.result_box .buttons button{
+    background-color: #05445E;
+    border: 2px white solid;
+    padding: 10px;
+    color: white;
+    animation-name: result;
+    animation-duration: 3s;
+}
+
+@keyframes result{
+    0%{
+        opacity: 0;
+        border-radius: 50%;
+    }
+    100%{
+        opacity: 1;
+        border-radius: 0%;
+    }
+}
+
+.result_box .buttons button:hover{
+    cursor: pointer;
+    color: #05445E;
+    background-color: #b1e9f5;
 }
