@@ -11,8 +11,6 @@ const exit_quiz_btn =document.querySelector(".quiz_box .buttons .exit ");
 const exit_result_btn =document.querySelector(".result_box .buttons .exit ");
 
 
-
-
 // start quiz button clicked
 start_btn.onclick = () =>{
     info_box.classList.add("activeInfo");
@@ -23,7 +21,6 @@ start_btn.onclick = () =>{
 exit_info_btn.onclick = () =>{
     info_box.classList.remove("activeInfo"); // hide the info box
 }
-
 // if  exit quiz  button clicked
 exit_quiz_btn.onclick = () =>{
     quiz_box.classList.remove("activeQuiz"); // hide the info box
@@ -34,7 +31,6 @@ exit_result_btn.onclick = () =>{
     quiz_box.classList.remove("activeQuiz"); // hide the info box
     info_box.classList.add("activeInfo");
 }
-
 // if continue button clicked
 continue_info_btn.onclick = () =>{
     info_box.classList.remove("activeInfo"); // hide the info box
@@ -54,7 +50,7 @@ const next_btn= quiz_box.querySelector(" .continue ");
 // if next question select 
 next_btn.onclick =()=>{
     
-    if(que_count < questionshtml.length-1){
+    if(que_count < questionsjs.length-1){
         que_count++;
         showquestions(que_count);
         clearInterval(counter);
@@ -71,17 +67,16 @@ next_btn.onclick =()=>{
 }
 
 
-
 // getting que and option from array
 function showquestions(index){
     
     const que_text = document.querySelector(".que_text");
     const option_list = document.querySelector(".quiz_box .option_list");
-    let que_tag ="<span>"+ questionshtml[index].numb+questionshtml[index].question+"</span>";
-    let option_tag='<div class="option">'+questionshtml[index].options[0]+'</div>'
-                      +'<div class="option">'+questionshtml[index].options[1]+'</div>'
-                      +'<div class="option">'+questionshtml[index].options[2]+'</div>'
-                      +'<div class="option">'+questionshtml[index].options[3]+'</div>';
+    let que_tag ="<span>"+ questionsjs[index].numb+questionsjs[index].question+"</span>";
+    let option_tag='<div class="option">'+questionsjs[index].options[0]+'</div>'
+                      +'<div class="option">'+questionsjs[index].options[1]+'</div>'
+                      +'<div class="option">'+questionsjs[index].options[2]+'</div>'
+                      +'<div class="option">'+questionsjs[index].options[3]+'</div>';
     que_text.innerHTML=que_tag;
     option_list.innerHTML=option_tag;
     
@@ -96,7 +91,7 @@ function optionSelected(answer){
     clearInterval(counter);
     clearInterval(counterLine);
     let userAns=answer.textContent;
-    let correctAns=questionshtml[que_count].answer;
+    let correctAns=questionsjs[que_count].answer;
     
 
     console.log(correctAns);
