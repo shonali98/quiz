@@ -14,60 +14,117 @@ body{
 
 /* --------------------------------------------- */
 /* index */
-/* logo */
-.logo{
-    
-    margin-top: 40px;
-    display: inline-block;
-    border: 1px rgb(233, 231, 225) solid;
-    border-radius: 70%;
-    padding: 20px;
-    background-color: #20c4cb ;
-    opacity: 0; 
-    /* animation */
-    animation-name: logo;
-    animation-duration: 3s;
-    animation-fill-mode: forwards;
-    animation-timing-function: linear;
-    
-    /* transmision */
-    transition-property: all;
-    transition-duration:4s ;
-
+.contain{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-@keyframes logo{
+.contain .ring {
+    
+    position: relative;
+    width: 100px;
+    height: 100px; 
+    margin-top: 150px;
+    border-radius: 50%;
+    border: 4px solid transparent;
+    /* border-top: 4px solid #20c4cb;  */
+    animation-name: ani1;
+    animation-duration: 4s; 
+    animation-iteration-count: infinite;  
+    animation-timing-function: linear;  
+}
+
+.contain  .ring:nth-child(3){
+    
+    position: absolute;
+    top: -66.66px;
+    
+}
+.contain .ring::before{
+    content: '';
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background-color: white; 
+    box-shadow: 0 0 0 3px #20c5cbe7,
+                0 0 0 7px #20c5cbb4,
+                0 0 0 15px #20c5cb9a,
+                0 0 17px #20c5cb63,
+                0 0 30px #20c5cb38;
+} 
+
+
+@keyframes ani1{
     0%{
-        transform: scaleX(0) scaleY(0);
-        opacity: 0;
-        border-radius: 10%;
+        transform: rotate(0deg); 
     }
-    25%{
-        transform: scaleX(0.25) scaleY(0.25);
-        opacity: 0.25;
-        border-radius: 20%;
-    }
-    50%{
-        transform: scaleX(0.50) scaleY(0.50);
-        opacity: 0.5;
-        border-radius: 30%;
-    }
-    75%{
-        transform: scaleX(0.75) scaleY(0.75);
-        opacity: 0.75;
-        border-radius: 40%;
-    }
-
     100%{
-        transform: scaleX(1) scaleY(1);
-        opacity: 1;
-        border-radius: 0;
+        
+        transform: rotate(360deg); 
     }
 }
-
-.logo:hover{
-    background-color: white;
+.contain .ring:nth-child(2){
+    animation: ani2 4s linear infinite;
+    animation-delay: -2s;
+    border-top: 4px solid transparent; 
+    /* border-left: 4px solid #6ec3e7;   */
     
+    
+    
+}
+.contain .ring:nth-child(2)::before{
+    content: '';
+    position: absolute;
+    top: initial;
+    bottom: 60px;
+    left: 5px;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    box-shadow: 0 0 0 3px #20c5cbd2,
+                0 0 0 7px #20c5cbb4,
+                0 0 0 15px #20c5cb9a,
+                0 0 17px #20c5cb63,
+                0 0 30px #20c5cb38;
+}
+@keyframes ani2{
+    0%{
+        transform: rotate(360deg); 
+    }
+    100%{
+        
+        transform: rotate(0deg); 
+    }
+}
+.contain  .ring:nth-child(3){
+    animation: ani2 4s linear infinite;
+    animation-delay: -3s;
+    position: absolute;
+    top: -66.66px;
+    border-top: 4px solid transparent;
+
+}
+.contain .ring:nth-child(3)::before{
+    content: '';
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    box-shadow: 0 0 0 3px #20c5cbe7,
+                0 0 0 7px #20c5cbb4,
+                0 0 0 15px #20c5cb9a,
+                0 0 17px #20c5cb63,
+                0 0 30px #20c5cb38;
 }
 /* header */
 .header{
@@ -96,7 +153,7 @@ body{
 
     }
     100%{
-        top: 60px;
+        top: 40px;
     }
 }
 
@@ -125,9 +182,12 @@ body{
     top: -20px;
     color: white;
     text-decoration: none;
-    padding: 0.5rem ;
+    padding: .25em 1em ;
     border: 1px white solid;
     opacity: 0;
+    border-radius: .2em;
+    box-shadow: 0 0 .8em 0 #20c4cb;
+    text-shadow: 0 0 0.2em #20c4cb;
     /* animation */
     animation-name: button;
     animation-duration: 3s;
@@ -139,6 +199,19 @@ body{
     transition-duration: 2s;
 
 }
+
+.button::before{
+    content: '';
+    position: absolute;
+    background-color:#6ec3e7;
+    top: 120%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transform: perspective(1em) rotateX(45deg) scale(1.2, .3);
+    filter: blur(2em);
+}
+
 
 @keyframes button{
     0%{
