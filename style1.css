@@ -126,7 +126,7 @@ body{
 
 
 .info_box{
-    width: 540px;
+    width: 80%;
     background-color: white;
     border: 2px #05445E;
     border-radius: 15px ;
@@ -196,7 +196,7 @@ body{
 }
 
 .quiz_box{
-    width: 50%;
+    width: 80%;
     background-color: white;
     border-radius: 5px;
     opacity: 0;
